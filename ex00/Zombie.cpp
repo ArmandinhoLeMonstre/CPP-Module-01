@@ -6,7 +6,7 @@
 /*   By: armitite <armitite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/01 20:59:25 by armitite          #+#    #+#             */
-/*   Updated: 2025/02/01 21:20:11 by armitite         ###   ########.fr       */
+/*   Updated: 2025/02/02 17:40:03 by armitite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,12 @@
 
 void	Zombie::announce(void) {
 
-	std::cout << "Braaiz" << std::endl;
+	std::cout <<this->name << ": BraiiiiiiinnnzzzZ..." << std::endl;
 
 	return ;
 }
 
-Zombie::Zombie(void) {
+Zombie::Zombie(std::string name_zombie) {
 
 	return ;
 }
