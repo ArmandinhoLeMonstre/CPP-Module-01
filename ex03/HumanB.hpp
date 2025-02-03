@@ -1,22 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   HumanB.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: armitite <armitite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/02 20:30:11 by armitite          #+#    #+#             */
-/*   Updated: 2025/02/03 08:46:21 by armitite         ###   ########.fr       */
+/*   Created: 2025/02/03 11:23:33 by armitite          #+#    #+#             */
+/*   Updated: 2025/02/03 11:52:01 by armitite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#ifndef HUMANB_HPP
+# define HUMANB_HPP
 
-int	main(void)
-{
-	Zombie	*zombie = zombieHorde(4, "Foo");
+#include <iostream>
+#include "Weapon.hpp"
 
-	delete [] zombie;
+class HumanB {
+
+public:
+
+	HumanB(std::string name);
+	~HumanB(void);
 	
-	return (0);
-}
+	void	attack(void);
+	void	setWeapon(Weapon &club);
+
+private:
+
+	std::string name;
+	Weapon *w_equipped;
+	
+};
+
+#endif

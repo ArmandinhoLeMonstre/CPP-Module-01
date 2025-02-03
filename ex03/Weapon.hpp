@@ -1,22 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Weapon.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: armitite <armitite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/02 20:30:11 by armitite          #+#    #+#             */
-/*   Updated: 2025/02/03 08:46:21 by armitite         ###   ########.fr       */
+/*   Created: 2025/02/03 09:29:29 by armitite          #+#    #+#             */
+/*   Updated: 2025/02/03 10:28:33 by armitite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#ifndef WEAPON_HPP
+# define WEAPON_HPP
+#include <iostream>
 
-int	main(void)
-{
-	Zombie	*zombie = zombieHorde(4, "Foo");
+class Weapon {
 
-	delete [] zombie;
-	
-	return (0);
-}
+public :
+
+	Weapon(std::string name);
+	~Weapon(void);
+
+	void	getType();
+	void	setType(std::string name);
+
+private:
+
+	std::string type;
+};
+
+#endif
