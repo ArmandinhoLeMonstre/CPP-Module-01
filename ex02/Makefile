@@ -1,4 +1,4 @@
-NAME = Zombie02
+NAME = ref_n_ptr
 CC = g++
 CFLAGS = -Wall -Wextra -Werror -std=c++98 -O3 
 
@@ -9,14 +9,14 @@ OBJ = main.cpp
 all : $(NAME)
 
 $(NAME) : $(OBJ)
-	@echo "\033[0;33m\nCOMPILING Zombie02...\n"
+	@echo "\033[0;33m\nCOMPILING ref_n_ptr...\n"
 	@$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
-	@echo "\033[1;32m./Zombie02 created\n"
+	@echo "\033[1;32m./ref_n_ptr created\n"
 
 clean :
-	$(RM) Zombie02
+	$(RM) ref_n_ptr
 
 fclean : clean
-	$(RM) Zombie02
+	$(RM) ref_n_ptr
 
 re : fclean all

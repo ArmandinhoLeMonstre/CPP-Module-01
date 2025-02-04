@@ -6,7 +6,7 @@
 /*   By: armitite <armitite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/02 20:30:11 by armitite          #+#    #+#             */
-/*   Updated: 2025/02/03 08:46:21 by armitite         ###   ########.fr       */
+/*   Updated: 2025/02/04 10:03:45 by armitite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	main(void)
 {
-	Zombie	*zombie = zombieHorde(4, "Foo");
+	Zombie	*zombie = zombieHorde(10, "Foo");
 
 	delete [] zombie;
 	

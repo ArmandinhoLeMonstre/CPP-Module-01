@@ -6,7 +6,7 @@
 /*   By: armitite <armitite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 11:25:02 by armitite          #+#    #+#             */
-/*   Updated: 2025/02/03 11:49:56 by armitite         ###   ########.fr       */
+/*   Updated: 2025/02/04 10:15:51 by armitite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,10 @@
 
 HumanB::HumanB(std::string name) : name(name) {
 	
-	std::cout << "Constructor HB called" << std::endl;
-	
 	return ;
 }
 
 HumanB::~HumanB(void) {
-	
-	std::cout << "Destructor HB called" << std::endl;
 	
 	return ;
 }
