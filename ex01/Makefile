@@ -1,22 +1,26 @@
 NAME = Zombie01
-CC = g++
-CFLAGS = -Wall -Wextra -Werror -std=c++98 -O3 
+CC = c++
+CFLAGS = -Wall -Wextra -Werror -std=c++98 -O3 #-fsanitize=address -g
 
 RM = rm -rf
 
-OBJ = main.cpp zombieHorde.cpp Zombie.cpp
+SRCS = main.cpp Zombie.cpp zombieHorde.cpp
+OBJS = $(SRCS:.cpp=.o)
 
-all : $(NAME)
+all: $(NAME)
 
-$(NAME) : $(OBJ)
+$(NAME): $(OBJS)
 	@echo "\033[0;33m\nCOMPILING Zombie01...\n"
-	@$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
+	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
 	@echo "\033[1;32m./Zombie01 created\n"
 
-clean :
-	$(RM) Zombie01
+%.o: %.cpp
+	@$(CC) $(CFLAGS) -c $< -o $@
 
-fclean : clean
-	$(RM) Zombie01
+clean:
+	$(RM) $(OBJS)
 
-re : fclean all
+fclean: clean
+	$(RM) $(NAME) Zombie01
+
+re: fclean all
