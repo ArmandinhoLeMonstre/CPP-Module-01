@@ -6,7 +6,7 @@
 /*   By: armitite <armitite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 12:09:58 by armitite          #+#    #+#             */
-/*   Updated: 2025/02/04 13:10:07 by armitite         ###   ########.fr       */
+/*   Updated: 2025/02/16 12:18:43 by armitite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 int	main(int ac, char **av)
 {	
 	if (ac != 4)
-		return (std::cout << "Args error", 1);
+		return (std::cout << "Args error" << std::endl, 2);
 	std::string word = av[2];
 	std::string replace = av[3];
 	
@@ -27,7 +27,7 @@ int	main(int ac, char **av)
     if (!ifs) 
 	{
         std::cerr << "Error opening file!" << std::endl;
-        return 1;
+        return 2;
     }
     std::ostringstream oss;
     oss << ifs.rdbuf();
@@ -37,7 +37,6 @@ int	main(int ac, char **av)
 	std::ofstream	ofs(out_name.c_str());
 
 	std::size_t found = content.find(word);
-	std::cout << found << std::endl;
 	while (found != std::string::npos)
 	{
 		for (unsigned i = 0; i < found; i++)

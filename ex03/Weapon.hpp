@@ -6,7 +6,7 @@
 /*   By: armitite <armitite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 09:29:29 by armitite          #+#    #+#             */
-/*   Updated: 2025/02/03 10:28:33 by armitite         ###   ########.fr       */
+/*   Updated: 2025/02/16 13:03:36 by armitite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ public :
 	Weapon(std::string name);
 	~Weapon(void);
 
-	void	getType();
+	const std::string	getType(void) const;
 	void	setType(std::string name);
 
 private:

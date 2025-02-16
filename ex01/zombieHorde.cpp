@@ -6,7 +6,7 @@
 /*   By: armitite <armitite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/02 20:30:17 by armitite          #+#    #+#             */
-/*   Updated: 2025/02/02 20:52:47 by armitite         ###   ########.fr       */
+/*   Updated: 2025/02/16 13:17:54 by armitite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ Zombie* zombieHorde( int N, std::string name ) {
 	for (int i = 0; i < N; i++) {
 		
 		zombies[i].set_name(name);
-		zombies[i].announce();
 	}
 	return (zombies);
 }

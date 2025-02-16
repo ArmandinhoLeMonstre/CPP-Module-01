@@ -6,17 +6,16 @@
 /*   By: armitite <armitite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 09:29:26 by armitite          #+#    #+#             */
-/*   Updated: 2025/02/04 10:20:09 by armitite         ###   ########.fr       */
+/*   Updated: 2025/02/16 13:04:26 by armitite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Weapon.hpp"
 
-void	Weapon::getType(void) {
+const std::string	Weapon::getType(void) const{
 
-	std::cout << type;
-
-	return ;
+	
+	return (this->type);
 }
 
 void	Weapon::setType(std::string name) {

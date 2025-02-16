@@ -6,7 +6,7 @@
 /*   By: armitite <armitite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 11:25:02 by armitite          #+#    #+#             */
-/*   Updated: 2025/02/04 10:15:51 by armitite         ###   ########.fr       */
+/*   Updated: 2025/02/16 13:04:47 by armitite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ void	HumanB::setWeapon(Weapon &club) {
 void	HumanB::attack(void) {
 
 	std::cout << this->name << " attacks with their ";
-	w_equipped->getType();
+	std::cout << w_equipped->getType();
 	std::cout << std::endl; 
 
 	return ;

@@ -1,22 +1,27 @@
 NAME = Humans
-CC = g++
-CFLAGS = -Wall -Wextra -Werror -std=c++98 -O3 
+CC = c++
+CFLAGS = -Wall -Wextra -Werror -std=c++98 -O3 #-fsanitize=address -g
 
 RM = rm -rf
 
-OBJ = main.cpp Weapon.hpp Weapon.cpp HumanA.hpp HumanA.cpp HumanB.hpp HumanB.cpp
+SRCS = main.cpp HumanA.cpp HumanB.cpp Weapon.cpp
+OBJS = $(SRCS:.cpp=.o)
+INCLUDE = -I HumanA.hpp -I HumanB.hpp -I Weapon.hpp 
 
-all : $(NAME)
+all: $(NAME)
 
-$(NAME) : $(OBJ)
+$(NAME): $(OBJS)
 	@echo "\033[0;33m\nCOMPILING Humans...\n"
-	@$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
+	$(CC) $(CFLAGS) $(INCLUDE) $(OBJS) -o $(NAME)
 	@echo "\033[1;32m./Humans created\n"
 
-clean :
-	$(RM) Humans
+%.o: %.cpp
+	@$(CC) $(CFLAGS) -c $< -o $@
 
-fclean : clean
-	$(RM) Humans
+clean:
+	$(RM) $(OBJS)
 
-re : fclean all
+fclean: clean
+	$(RM) $(NAME) Humans
+
+re: fclean all
